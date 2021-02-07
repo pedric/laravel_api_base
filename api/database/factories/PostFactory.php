@@ -23,8 +23,8 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'title' => 'titel',
-            'body' => 'lorem ipsum sit amet osv.',
+            'title' => $this->faker->text($maxNbChars = 15),
+            'body' => $this->faker->text($maxNbChars = 200),
             'author' => $this->faker->name,
         ];
     }
