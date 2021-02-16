@@ -15,6 +15,10 @@ class PostsController extends Controller
     }
 
     public function getPoll($id){
+        $post = Post::find($id);
+        if(is_null($post)){
+            return response()->json(null, 404);
+        }
         return response()->json(Post::find($id), 200);
     }
 
