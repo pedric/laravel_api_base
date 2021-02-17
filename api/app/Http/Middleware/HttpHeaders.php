@@ -16,8 +16,9 @@ class HttpHeaders
      */
     public function handle(Request $request, Closure $next)
     {
-        $response = $next($request);
+        /*$response = $next($request);
         $response->header('X-POST', 'Post API');
-        return $response;
+        return $response;*/
+        return $next($request);
     }
 }

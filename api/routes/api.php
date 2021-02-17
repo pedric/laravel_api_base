@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\FilesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,8 @@ Route::post('post', [PostsController::class, 'store']);
 Route::put('posts/{post}', [PostsController::class, 'update']);
 
 Route::delete('posts/{post}', [PostsController::class, 'delete']);
+
+// files
+Route::get('files/get', [FilesController::class, 'show']);
+
+Route::post('files/create', [FilesController::class, 'create']);
